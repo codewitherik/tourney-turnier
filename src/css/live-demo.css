@@ -1,15 +1,26 @@
-body {
-    font-family: 'Roboto' sans-serif;
-    font-weight: 300;
-    line-height: 1.5em;
-    margin: 0px;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: left;
-    color: black;
-    grey
+  body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: grey;
+  }
+
+    .tournament-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+    }
+
+
+.avatar {
+  display: inline-block;
 }
+
+.header-filter {
+  background-color: grey; /* oder Bild */
+  padding: 60px 0;
+}
+
+
 
 .modal-title {
     font-weight: bold;
