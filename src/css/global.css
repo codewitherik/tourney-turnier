@@ -1,0 +1,429 @@
+.scrollable {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, black 100%);
+    bottom: 0;
+    display: block;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00ffffff",endColorstr="#000000",GradientType=0);
+    height: 140px;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 800;
+}
+
+.scroll-top {
+    background: red;
+    border-radius: 50%;
+    color: #ffffff;
+}
+
+.scrollable .mouse {
+    animation: intro 1s forwards;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    bottom: 30px;
+    height: 42px;
+    left: 50%;
+    margin-left: -12px;
+    opacity: 0;
+    position: absolute;
+    width: 22px;
+    z-index: 40;
+}
+
+/* ======= Body ============= */
+
+/* ========== Minimaler CSS Reset ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter' sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  color: #222;
+}
+ picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+img  {
+    width: 120px;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+/* ========== Headings ========== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: #222;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+
+h6 {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: #777;
+}
+
+
+
+
+/* Google Recaptcha */
+
+.grecaptcha-badge {
+  position: fixed !important;
+  bottom: 10px !important;
+  right: 10px !important;
+  left: auto !important;
+  z-index: 9999 !important;
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+div {
+ outline: none;
+}
+
+/* ======== Header ========= */
+
+.tourney-header {
+padding: 10px 0px;
+top: 0px;
+right: 0px;
+width: 100%;
+z-index: 999;
+position: absolute !important;
+}
+
+header {
+    display: block;
+}
+
+nav {
+    padding: 10px 5px;
+    display: block;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar {
+    position: relative;
+}
+
+.brand-logo img {
+    width: 120px;
+}
+
+/* ==== Navigation ======= */
+
+.login-button-2 {
+  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: -0.66px;
+  display: inline-block;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  transform: perspective(1px) translateZ(0px);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  color: white;
+  background-color: gold;
+  border: 1px solid gold;
+  outline: none !important;
+}
+
+.login-button-2:hover {
+  color: blue;
+}
+
+.tourney-login-button {
+  font-size: 16px !important;
+  min-width: 0px !important;
+  height: 45px !important;
+  padding: 0.4rem 0.75em !important;
+}
+
+.eyeable-button {
+  bottom: 15px !important;
+  right: auto !important;
+  left: 15px !important;
+}
+
+
+/* ============ Hero ============ */
+
+.hero {
+  box-sizing: border-box;
+  min-width: 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.hero1 {
+  display: none;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.tourney-hero-1 {
+  filter: drop-shadow(0px 52px 54px) rgba(128,144,187, 0.58);
+  margin-bottom: 80px;
+}
+
+.tourney-image-wrapper  {
+  position: relative;
+  overflow: hidden;
+}
+
+.tourney-images {
+  width: 100%;
+  padding-bottom: 198.8%;
+}
+
+.tourney-hero {
+  z-index: 10;
+}
+
+.tourney-hero-3 {
+  box-sizing: border-box;
+  min-width: 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.text-1 {
+  font-weight: 700;
+  letter-spacing: -2.5px;
+  font-size: 40px;
+  line-height: 45px;
+  margin-bottom: 16px;
+  color: black;
+}
+
+.tourney-typewriter {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  color: #007bff; /* Bootstrap Blau */
+  display: flex;
+  align-items: center;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1px;
+  background-color: #007bff;
+  animation: blink 0.7s steps(1) infinite;
+  margin-left: 4px;
+  height: 1.2em;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+#typewriter-text {
+  color: gold;
+}
+
+.text {
+  color: gold;
+}
+
+.text-subtitle {
+   font-weight: 700;
+  letter-spacing: -2.5px;
+  font-size: 40px;
+  line-height: 45px;
+  margin-bottom: 16px;
+  color: black;
+}
+
+.text-4 {
+  display: block;
+   font-weight: 700;
+  letter-spacing: -2.5px;
+  font-size: 40px;
+  line-height: 45px;
+  margin-bottom: 16px;
+  color: black;
+}
+
+.list-1 {
+  box-sizing: border-box;
+  max-width: 0px;
+  margin-bottom: 32px;
+  list-style: none;
+  margin: 0px;
+  padding-top: 0px;
+  padding-left: 0px;
+  color: rgb(25, 25, 27);
+  font-size: 21px;
+  font-weight: 500;
+   letter-spacing: -0.66px;
+  line-height: 30px;
+   display: flex;
+  margin-bottom: 15px;
+}
+
+.list-1::before {
+  content: "";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 40px;
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    background-color: rgba(98, 111, 210, 0.1);
+    display: flex
+;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 500px;
+    color: gold;
+    position: relative;
+    margin-right: 13px;
+}
+
+@media screen and (min-width: 768px) {
+    .section-1 {
+        padding-top: 50px;
+    }
+}
+
+
+@media screen and (min-width: 576px) {
+    .section-1 {
+        padding-top: 50px;
+    }
+}
+
+.section-1 {
+    box-sizing: border-box;
+    min-width: 0px;
+    background-color: rgb(247, 247, 251);
+    padding-top: 50px;
+}
+
+.section-title {
+  font-weight: 700;
+  letter-spacing: -2.5px;
+  font-size: 40px;
+  line-height: 45px;
+  color: black;
+}
+
+.subtitle {
+  font-size: 21px;
+  font-weight: 300;
+  letter-spacing: -0.66px;
+  line-height: 38px;
+  color: black;
+  margin-bottom: 32px;
+}
+
+
+
