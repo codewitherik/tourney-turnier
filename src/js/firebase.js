@@ -15,3 +15,17 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+  function login() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    auth.signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        alert("Erfolgreich eingeloggt: " + userCredential.user.email);
+        // Weiterleiten z. B.: window.location.href = "dashboard.html";
+      })
+      .catch((error) => {
+        alert("Fehler: " + error.message);
+      });
+  }
