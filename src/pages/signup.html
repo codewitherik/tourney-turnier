@@ -104,12 +104,27 @@
         <button type="submit" class="mui-btn mui-btn--primary" style="width:100%;">REGISTRIERUNG</button>
         <br><br>
         <a href="/index.html">Zurück</a>
-        <button onclick="logout()" class="btn btn-secondary mt-3">Logout</button>
+        <button onclick="logout()" class="btn btn-secondary mt-3 me-2">Logout</button>
+        <button type="button" onclick="googleLogin()" class="btn btn-danger mt-3">
+          <i class="fab fa-google me-1"></i> Mit Google anmelden
+        </button>
         <script>
         function logout() {
          auth.signOut().then(() => {
           alert("Abgemeldet!");
         });
+        }
+        // Google Login Funktion
+        function googleLogin() {
+          const provider = new firebase.auth.GoogleAuthProvider();
+          auth.signInWithPopup(provider)
+            .then((result) => {
+              alert("Erfolgreich mit Google angemeldet: " + result.user.email);
+              // Optional: Weiterleitung
+            })
+            .catch((error) => {
+              alert("Fehler bei Google-Anmeldung: " + error.message);
+            });
         }
        </script>
       </form>
