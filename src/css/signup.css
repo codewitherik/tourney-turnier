@@ -20,3 +20,7 @@ body {
 #root {
     min-height: 100vh;
 }
+
+.tourney-signup {
+    width: 100%;
+}
