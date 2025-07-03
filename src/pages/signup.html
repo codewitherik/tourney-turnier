@@ -33,77 +33,56 @@
     <div class="mb-3">
       <input type="password" id="password" class="form-control" placeholder="Passwort" />
     </div>
-    <button class="btn btn-primary w-100 mb-2" onclick="loginEmail()">Einloggen mit E-Mail</button>
+    <button class="btn btn-primary w-100 mb-2" onclick="loginEmail(event)">Einloggen mit E-Mail</button>
+    <button class="btn btn-success w-100 mb-2" onclick="registerEmail(event)">Registrieren mit E-Mail</button>
 
     <!-- Google Login -->
-    <button class="btn btn-danger w-100" onclick="loginWithGoogle()">
+    <button class="btn btn-danger w-100" onclick="loginWithGoogle(event)">
       <i class="fab fa-google me-2"></i> Mit Google anmelden
     </button>
 
     <!-- Logout -->
     <div class="text-center mt-4">
-      <button class="btn btn-outline-secondary" onclick="logout()">Logout</button>
+      <button class="btn btn-outline-secondary" onclick="logout(event)">Logout</button>
     </div>
   </div>
 
-
+  <script src="/src/js/firebase.js"></script>
   <script>
-    // Dein Firebase-Projekt konfigurieren
-    const firebaseConfig = {
-      apiKey: "AIzaSyB4lE7AatRUXt0tSKsNRrXn1N94c4gn60s",
-      authDomain: "tourney-turnieplaner.firebaseapp.com",
-      projectId: "tourney-turnieplaner",
-      appId: "1:543729051769:web:96c8d752e98e2b1640cca8"
-    };
-
-    // Firebase initialisieren
-    firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
-
-      // Login
-    function login() {
+    // Nutze die globale Variable 'firebase' und 'auth' aus firebase.js
+    // E-Mail Login
+    function loginEmail(e) {
+      e.preventDefault();
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
-
       auth.signInWithEmailAndPassword(email, password)
         .then(user => alert("Willkommen, " + user.user.email))
         .catch(err => alert("Fehler: " + err.message));
     }
-
     // Registrierung
-    function register() {
+    function registerEmail(e) {
+      e.preventDefault();
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
-
       auth.createUserWithEmailAndPassword(email, password)
         .then(user => alert("Registrierung erfolgreich: " + user.user.email))
         .catch(err => alert("Fehler: " + err.message));
     }
-
-    // Passwort zurücksetzen
-    function resetPassword() {
-      const email = document.getElementById("email").value;
-      if (!email) return alert("Bitte E-Mail eingeben.");
-
-      auth.sendPasswordResetEmail(email)
-        .then(() => alert("Passwort-Link gesendet an: " + email))
-        .catch(err => alert("Fehler: " + err.message));
-    }
-
     // Google Login
-    function loginWithGoogle() {
+    function loginWithGoogle(e) {
+      e.preventDefault();
       const provider = new firebase.auth.GoogleAuthProvider();
       auth.signInWithPopup(provider)
         .then(result => alert("Google Login: " + result.user.displayName))
         .catch(err => alert("Fehler: " + err.message));
     }
-
     // Logout
-    function logout() {
+    function logout(e) {
+      e.preventDefault();
       auth.signOut()
         .then(() => alert("Abgemeldet"))
         .catch(err => alert("Fehler: " + err.message));
     }
-</script>
+  </script>
 </body>
 </html>
